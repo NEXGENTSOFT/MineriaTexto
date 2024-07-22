@@ -57,7 +57,7 @@ def correct_text():
     prompt_en = translator_es_en(input_text)[0]['translation_text']
 
     # Usar el modelo para corregir el texto en inglés
-    prompt = f"fix: {prompt_en}"  # Añadir el prefijo 'fix:' aquí
+    prompt = f"{prompt_en}"
     corrected_text_en = corrector(prompt, max_length=512, num_return_sequences=1)[0]['generated_text']
 
     # Traducir el texto corregido de vuelta al español
